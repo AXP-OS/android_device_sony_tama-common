@@ -9,7 +9,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
 # Get non-open-source specific aspects
@@ -23,7 +22,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # A/B
 AB_OTA_UPDATER := true
@@ -262,7 +260,6 @@ PRODUCT_PACKAGES += \
 
 # Lineage Health
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -367,8 +364,6 @@ PRODUCT_PACKAGES += \
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -448,7 +443,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
 
 PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
