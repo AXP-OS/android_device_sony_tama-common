@@ -1,2 +1,8 @@
 # RIL
 ro.telephony.block_binder_thread_on_incoming_calls=false
+
+ro.oem_unlock_supported=0
+
+sys.oem_unlock_allowed=0
+
+ro.boot.flash.locked=0

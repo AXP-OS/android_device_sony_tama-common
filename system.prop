@@ -34,5 +34,11 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.vendor.qti.va_aosp.support=1
 
 # Wireless display
-persist.debug.wfd.enable=1
+persist.debug.wfd.enable=0
 persist.sys.wfd.virtual=0
+
+ro.oem_unlock_supported=0
+
+sys.oem_unlock_allowed=0
+
+ro.boot.flash.locked=0
